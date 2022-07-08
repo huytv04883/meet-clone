@@ -1,11 +1,12 @@
-import logo from "./logo.svg";
-import "./App.css";
+import { ContextProvider } from "./context/contextProvider";
 import MainScreen from "./components/MainScreen/MainScreen";
 
 function App() {
   return (
     <div className="App">
-      <MainScreen />
+      <ContextProvider>
+        <MainScreen />
+      </ContextProvider>
     </div>
   );
 }
